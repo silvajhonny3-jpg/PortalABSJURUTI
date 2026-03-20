@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SE Suite - JURUTI</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html, body {
+    width: 100%;
+    height: 100%;
+    background: #f0f2f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+
+  .card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.10);
+    padding: 40px 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    min-width: 260px;
+    animation: fadeIn 0.5s ease;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .logo-wrapper {
+    width: 96px;
+    height: 96px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* ABS Logo rendered in pure SVG — no external images needed */
+  .logo-wrapper svg {
+    width: 96px;
+    height: 96px;
+  }
+
+  .label-title {
+    color: #1a3a6b;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    text-align: center;
+    line-height: 1.4;
+  }
+
+  .label-sub {
+    color: #1a3a6b;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-align: center;
+  }
+
+  /* Optional: make the card a clickable button */
+  .card-link {
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  .card:hover {
+    box-shadow: 0 8px 32px rgba(26, 58, 107, 0.18);
+    transform: translateY(-2px);
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<a class="card-link" href="https://alcoa.softexpert.com/softexpert/login?page=dashboardList" target="_blank" rel="noopener noreferrer" title="SE Suite - JURUTI">
+  <div class="card">
+
+    <!-- ABS Logo in pure inline SVG (no external resources) -->
+    <div class="logo-wrapper">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <!-- Outer circle gradient -->
+        <defs>
+          <radialGradient id="bgGrad" cx="50%" cy="40%" r="55%">
+            <stop offset="0%" stop-color="#3a7bd5"/>
+            <stop offset="100%" stop-color="#1a3a6b"/>
+          </radialGradient>
+          <radialGradient id="innerGrad" cx="40%" cy="35%" r="60%">
+            <stop offset="0%" stop-color="#5a9be8"/>
+            <stop offset="100%" stop-color="#1a3a6b"/>
+          </radialGradient>
+        </defs>
+
+        <!-- Main circle -->
+        <circle cx="50" cy="50" r="48" fill="url(#bgGrad)" stroke="#c8d8f0" stroke-width="1.5"/>
+
+        <!-- Inner ring -->
+        <circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+
+        <!-- "ABS" text -->
+        <text x="50" y="58"
+              text-anchor="middle"
+              font-family="'Segoe UI', Arial, sans-serif"
+              font-size="28"
+              font-weight="900"
+              letter-spacing="1"
+              fill="white">ABS</text>
+
+        <!-- Top arc text: ALCOA BUSINESS -->
+        <path id="topArc" d="M 15,50 A 35,35 0 0,1 85,50" fill="none"/>
+        <text font-family="'Segoe UI', Arial, sans-serif" font-size="7.5" fill="rgba(255,255,255,0.88)" letter-spacing="1.2">
+          <textPath href="#topArc" startOffset="12%">ALCOA BUSINESS</textPath>
+        </text>
+
+        <!-- Bottom arc text: SERVICES -->
+        <path id="botArc" d="M 17,55 A 35,35 0 0,0 83,55" fill="none"/>
+        <text font-family="'Segoe UI', Arial, sans-serif" font-size="7.5" fill="rgba(255,255,255,0.88)" letter-spacing="2">
+          <textPath href="#botArc" startOffset="22%">SERVICES</textPath>
+        </text>
+      </svg>
+    </div>
+
+    <div class="label-title">Welcome to SE Suite!</div>
+    <div class="label-sub">JURUTI</div>
+
+  </div>
+</a>
+
+</body>
+</html>
